@@ -1,0 +1,28 @@
+Revert Commit :
+
+1. Revert the last (x) commits, keep/bring the changes in local.
+
+git reset --soft HEAD~1
+
+git push -f origin main
+
+2. Revert the last (x) commits, don't keep/bring the changes in local.
+Commit will be deleted from repo. No trace.
+
+git reset --hard HEAD~1
+
+git push -f origin main
+
+HEAD~1 means revert last one commit.
+HEAD~3 means revert last three commit.
+
+3. Revert all the changes from this commit.
+This change also will be registered as an commit. Trace.
+
+git revert COMMIT_ID
+
+Ex :
+
+git revert b7b67a2f7536239730de46eaad1c4a7174da535c
+
+git revert b7b67a2
